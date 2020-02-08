@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using NetCorePracticeRazor.Model;
 
-namespace NetCorePracticeRazor.Pages.BookList
+namespace NetCorePracticeRazor
 {
     public class IndexModel : PageModel
     {
