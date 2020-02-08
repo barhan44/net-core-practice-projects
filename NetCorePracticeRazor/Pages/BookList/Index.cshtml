@@ -26,9 +26,9 @@
                         <th>
                             <label asp-for="Books.FirstOrDefault().ISBN"></label>
                         </th>
-                    </tr>
-                    @foreach (var item in Model.Books)
-                    {
+                        <th></th>
+                        @foreach (var item in Model.Books)
+                        {
                         <tr>
                             <td>
                                 @Html.DisplayFor(m => item.Name)
@@ -45,12 +45,12 @@
                             </td>
                         </tr>
                     }
-                </table>
-            }
-            else
-            {
-                <p>No books available.</p>
-            }
+                    </table>
+                }
+                else
+                {
+                    <p>No books available.</p>
+                }
         </form>
     </div>
 </div>
