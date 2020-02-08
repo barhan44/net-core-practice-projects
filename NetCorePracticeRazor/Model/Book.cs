@@ -16,6 +16,7 @@ namespace NetCorePracticeRazor.Model
 
         public string Author { get; set; }
 
+        public string ISBN { get; set; }
 
     }
 }
