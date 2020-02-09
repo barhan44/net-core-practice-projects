@@ -41,6 +41,26 @@ namespace NetCorePracticeMVC.Controllers
             return View(Book);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Upsert()
+        {
+            if (ModelState.IsValid)
+            {
+                if (Book.Id == 0)
+                {
+                    _db.Books.Add(Book);
+                }
+                else
+                {
+                    _db.Books.Update(Book);
+                }
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(Book);
+        }
+
         #region API Calls
         [HttpGet]
         public async Task<IActionResult> GetAll()
